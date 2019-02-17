@@ -1,0 +1,13 @@
+tdd/kgh/models/jdbc/Customer.class
+tdd/kgh/MainServer.class
+tdd/kgh/operations/CustomerOperations.class
+tdd/kgh/DBConnection.class
+tdd/kgh/endpoints/CustomerManagement.class
+tdd/kgh/CorsConfig.class
+tdd/kgh/endpoints/RoomManagement.class
+tdd/kgh/operations/RoomOperations.class
+tdd/kgh/models/jdbc/Room.class
+tdd/kgh/dao/RoomDAOHibernateImpl.class
+tdd/kgh/CorsConfig$1.class
+tdd/kgh/models/Room.class
+tdd/kgh/dao/RoomDao.class
