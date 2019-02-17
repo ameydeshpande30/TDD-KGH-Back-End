@@ -4,19 +4,24 @@ import java.sql.*;
 import java.util.Properties;
 
 public final class DBConnection {
-	public static Statement stmt=null;
-	public static Connection con=null;
-	public static int connFlag=0;
-	public static ClassLoader loader;
-	public static  Properties props;
-	//public InputStream resourceStream;
+	static Statement stmt=null;
+	static Connection con=null;
+	static ClassLoader loader;
+	static  Properties props;
+		
+	public static Connection getConnection(){
+		return con;
+	}
+	
+	public static Properties getProperties() {
+		return props;
+	}
+	
 	
 	public DBConnection() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/KondwaGuestHouse","bunksheet", "sheetbunk123");
-			stmt = con.createStatement();
-			connFlag=1;
 		}
 		catch(Exception e){
 			System.out.print(e);
@@ -27,8 +32,6 @@ public final class DBConnection {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/KondwaGuestHouse","bunksheet", "sheetbunk123");
-			stmt = con.createStatement();
-			connFlag=1;
 		}
 		catch(Exception e){
 			System.out.print(e);
@@ -37,9 +40,7 @@ public final class DBConnection {
 	
 	public static void closeConnection() throws Exception {
 		try {
-			stmt.close();
 			con.close();
-			connFlag=0;
 		}
 		catch(Exception e) {
 			System.out.println(e);
@@ -54,10 +55,8 @@ public final class DBConnection {
 			props = new Properties();
 			InputStream resourceStream = loader.getResourceAsStream(resourceName);
 			props.load(resourceStream);
-			//String qry = props.getProperty("showCategoryList");
 		}
 		catch(Exception e) {
-			System.out.println("edvervv\nvrtbr5\n");
 				e.printStackTrace();
 		}
 	}

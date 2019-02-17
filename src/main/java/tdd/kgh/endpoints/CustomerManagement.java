@@ -1,41 +1,38 @@
 package tdd.kgh.endpoints;
-import java.util.*;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.ArrayList;
+import java.util.Map;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import tdd.kgh.dao.RoomDao;
-import tdd.kgh.models.jdbc.*;
 import tdd.kgh.operations.*;
+import tdd.kgh.models.jdbc.Customer;
+import tdd.kgh.models.jdbc.Room;
 
 @RestController
-@RequestMapping("/api/room")
-public class RoomManagement {
-	RoomOperations roomOperations = new RoomOperations();
-	private RoomDao roomdao;
-	@Autowired
-	public RoomManagement(RoomDao rd) {
-		roomdao = rd;
-	}
+@RequestMapping("/api/customer")
+public class CustomerManagement {
+	CustomerOperations CustomerOperations = new CustomerOperations();
 	@GetMapping("/getList")
-	public ArrayList<Room> findAll() {
+	public ArrayList<Customer> findAll() {
 		try {
-			return roomOperations.showRoomList();
+			
+			return CustomerOperations.showCustomerList();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;
 	}
-	@GetMapping("/delRoom/{id}")
+	@GetMapping("/del/{id}")
 	public boolean delRoom(@PathVariable int id) {
 		try {
-			return roomOperations.deleteRoom(new Room(id,30,20,"name"));
+			return CustomerOperations.deleteCustomer(new Customer(id, "name", "address", "7588758032", "ameyd30@gmail.com", "aadhar",
+					"idproof"));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -44,16 +41,20 @@ public class RoomManagement {
 	}
 	@PostMapping("/addUpdate")
 	public String addUpdate(@RequestBody Map<String, Object> payload) {
-		System.out.println(payload.get("update"));
+		
 		int update = (int) payload.get("update");
 		int id = Integer.parseInt((String) payload.get("id"));
-		int size = Integer.parseInt((String) payload.get("size"));
-		int price = Integer.parseInt((String) payload.get("price"));
 		String name = (String) payload.get("name");
+		String address = (String) payload.get("address");
+		String contactNumber = (String) payload.get("contactNumber");
+		String email = (String) payload.get("email");
+		String aadhar = (String) payload.get("aadhar");
+		String idproof = (String) payload.get("idproof");
+		
 		
 		if(update == 1) {
 			try {
-				roomOperations.updateRoom(new Room(id, size, price, name));
+				CustomerOperations.updateCustomer(new Customer(id, name, address, contactNumber, email, aadhar, idproof));
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -61,7 +62,7 @@ public class RoomManagement {
 		}
 		else {
 			try {
-				roomOperations.addRoom(new Room(id, size, price, name));
+				CustomerOperations.addCustomer(new Customer(id, name, address, contactNumber, email, aadhar, idproof));
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -69,11 +70,5 @@ public class RoomManagement {
 		}
 		return null;
 	}
-//	@GetMapping("/addRoom")
-//	public List<Room> add() {
-//		Room r = new Room("Test",20,30);
-//		roomdao.add(r);
-//		return roomdao.findAll();
-//	}
-
+	
 }
