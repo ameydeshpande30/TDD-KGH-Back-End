@@ -28,7 +28,7 @@ public class RoomManagement {
 			return roomOperations.showRoomList();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e.printStackTrace(); //remove e.log trace
 		}
 		return null;
 	}
