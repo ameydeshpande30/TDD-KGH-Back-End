@@ -3,6 +3,7 @@ package tdd.kgh.endpoints;
 import java.util.ArrayList;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +17,8 @@ import tdd.kgh.models.jdbc.Room;
 @RestController
 @RequestMapping("/api/customer")
 public class CustomerManagement {
-	CustomerOperations CustomerOperations = new CustomerOperations();
+	@Autowired
+	CustomerOperations CustomerOperations ;
 	@GetMapping("/getList")
 	public ArrayList<Customer> findAll() {
 		try {

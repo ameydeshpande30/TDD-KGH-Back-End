@@ -21,8 +21,8 @@ public final class DBConnection {
 	public DBConnection() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-//			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/KondwaGuestHouse","bunksheet", "sheetbunk123");
-			con = DriverManager.getConnection("jdbc:mysql://db4free.net/kondwaguesthouse","asdtddkgh", "asd-tdd-kgh");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/KondwaGuestHouse","bunksheet", "sheetbunk123");
+//			con = DriverManager.getConnection("jdbc:mysql://db4free.net/kondwaguesthouse","asdtddkgh", "asd-tdd-kgh");
 		}
 		catch(Exception e){
 			System.out.print(e);
@@ -32,8 +32,8 @@ public final class DBConnection {
 	public static void connect()throws Exception {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-//			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/KondwaGuestHouse","bunksheet", "sheetbunk123");
-			con = DriverManager.getConnection("jdbc:mysql://db4free.net/kondwaguesthouse","asdtddkgh", "asd-tdd-kgh");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/KondwaGuestHouse","bunksheet", "sheetbunk123");
+//			con = DriverManager.getConnection("jdbc:mysql://db4free.net/kondwaguesthouse","asdtddkgh", "asd-tdd-kgh");
 		}
 		catch(Exception e){
 			System.out.print(e);

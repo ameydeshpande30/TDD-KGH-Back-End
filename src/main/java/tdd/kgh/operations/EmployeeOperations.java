@@ -5,9 +5,11 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Properties;
 
+import org.springframework.stereotype.Component;
+
 import tdd.kgh.DBConnection;
 import tdd.kgh.models.jdbc.Employee;
-
+@Component
 public class EmployeeOperations {
 	
 

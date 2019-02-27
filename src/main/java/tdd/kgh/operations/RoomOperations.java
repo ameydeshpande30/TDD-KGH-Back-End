@@ -4,9 +4,11 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Properties;
 
+import org.springframework.stereotype.Component;
+
 import tdd.kgh.DBConnection;
 import tdd.kgh.models.jdbc.*;;
-
+@Component
 public class RoomOperations {
 	public boolean addRoom (Room r)throws Exception{
 		if(DBConnection.getConnection()==null) 

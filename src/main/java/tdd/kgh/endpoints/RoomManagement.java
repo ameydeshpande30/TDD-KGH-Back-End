@@ -6,22 +6,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import tdd.kgh.dao.RoomDao;
 import tdd.kgh.models.jdbc.*;
 import tdd.kgh.operations.*;
 
 @RestController
 @RequestMapping("/api/room")
 public class RoomManagement {
-	RoomOperations roomOperations = new RoomOperations();
-	private RoomDao roomdao;
 	@Autowired
-	public RoomManagement(RoomDao rd) {
-		roomdao = rd;
-	}
+	RoomOperations roomOperations ;
+	
 	@GetMapping("/getList")
 	public ArrayList<Room> findAll() {
 		try {

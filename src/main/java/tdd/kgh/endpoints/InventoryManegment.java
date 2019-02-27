@@ -3,6 +3,7 @@ package tdd.kgh.endpoints;
 import java.util.ArrayList;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,7 +19,8 @@ import tdd.kgh.operations.InventoryOperations;
 @RestController
 @RequestMapping("/api")
 public class InventoryManegment {
-	InventoryOperations inventoryOperations = new InventoryOperations();
+	@Autowired
+	InventoryOperations inventoryOperations ;
 	@GetMapping("/inventory")
 	public ArrayList<Inventory> findAll() {
 		try {
