@@ -33,16 +33,18 @@ public class EmployeeManegment {
 	}
 	@PostMapping("/employee/add")
 	public String addUpdate(@RequestBody Map<String, Object> payload) {
-		System.out.println(payload.get("update"));
+		System.out.println(payload.toString());
 		int update = (int) payload.get("update");
 		int id = Integer.parseInt((String) payload.get("id"));
 		String name = (String) payload.get("name");
 		String contactNumber = (String) payload.get("contactNumber");
 		String username = (String) payload.get("username");
-		String dOJ = (String) payload.get("dOJ");
-		int sal = (int) payload.get("sal");
-		int dId = (int) payload.get("dId");
-		int rId = (int) payload.get("rId");
+		String dOJ = (String) payload.get("doj");
+//		int sal = (int) payload.get("sal");
+		int sal = 2000;
+		int dId = Integer.parseInt((String) payload.get("dId"));
+		int rId = Integer.parseInt((String) payload.get("rId"));
+	
 		String password = (String) payload.get("password");
 		
 		if(update == 1) {

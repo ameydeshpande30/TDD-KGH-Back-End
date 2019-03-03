@@ -60,17 +60,25 @@ public class CustomerManagement {
 		}
 		return false;
 	}
-	@PostMapping("/addUpdate")
-	public String addUpdate(@RequestBody Map<String, Object> payload, @RequestParam("file") MultipartFile file )  {
+	@PostMapping("/addUpdate/{update}")
+	public String addUpdate(@RequestParam("file") MultipartFile file, 
+			@RequestParam int id ,
+			@RequestParam String name ,
+			@RequestParam String address ,
+			@RequestParam String contactNumber ,
+			@RequestParam String email ,
+			@RequestParam String aadhar,
+			@PathVariable int update )  {
 		
-		int update = (int) payload.get("update");
-		int id = Integer.parseInt((String) payload.get("id"));
-		String name = (String) payload.get("name");
-		String address = (String) payload.get("address");
-		String contactNumber = (String) payload.get("contactNumber");
-		String email = (String) payload.get("email");
-		String aadhar = (String) payload.get("aadhar");
-//		String idproof = (String) payload.get("idproof");
+//		System.out.println(payload);
+//		int id = Integer.parseInt((String) payload.get("id"));
+//		String name = (String) payload.get("name");
+//		String address = (String) payload.get("address");
+//		String contactNumber = (String) payload.get("contactNumber");
+//		String email = (String) payload.get("email");
+//		String aadhar = (String) payload.get("aadhar");
+////		String idproof = (String) payload.get("idproof");
+		
 		String fileName = fileStorageService.storeFile(file);
 		String idproof = ServletUriComponentsBuilder.fromCurrentContextPath()
                 .path("/api/customer/downloadFile/")
