@@ -1,0 +1,5 @@
+tdd/kgh/operations/OrderOperations.class
+tdd/kgh/models/jdbc/Order_Items.class
+tdd/kgh/models/jdbc/Order.class
+tdd/kgh/models/jdbc/Bill.class
+tdd/kgh/endpoints/BillManegment.class

@@ -3,6 +3,7 @@
 /media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/models/jdbc/Customer.java
 /media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/CorsConfig.java
 /media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/operations/EmployeeOperations.java
+/media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/models/jdbc/Order.java
 /media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/operations/RoomOperations.java
 /media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/models/jdbc/Room.java
 /media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/operations/RolesOperations.java
@@ -14,6 +15,8 @@
 /media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/endpoints/CategoryManegment.java
 /media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/operations/CustomerOperations.java
 /media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/DBConnection.java
+/media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/endpoints/BillManegment.java
+/media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/operations/OrderOperations.java
 /media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/endpoints/InventoryManegment.java
 /media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/endpoints/Login.java
 /media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/models/jdbc/Inventory.java
@@ -22,8 +25,10 @@
 /media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/models/Room.java
 /media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/operations/InventoryOperations.java
 /media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/endpoints/CustomerManagement.java
+/media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/models/jdbc/Bill.java
 /media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/endpoints/EmployeeManegment.java
 /media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/models/jdbc/Role.java
 /media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/dao/RoomDAOHibernateImpl.java
 /media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/SpringSecurityWebAppConfig.java
+/media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/models/jdbc/Order_Items.java
 /media/amey/SUKHADA/guesthouse/backend/TDD-KGH-Back-End/src/main/java/tdd/kgh/operations/DepartmentOperations.java
