@@ -20,7 +20,10 @@ public class MainServer {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+//		BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+//		 System.out.println(bCryptPasswordEncoder.encode("admin123"));
 		 SpringApplication.run(MainServer.class, args);
+		 
 		
 	}
 	
@@ -29,22 +32,22 @@ public class MainServer {
 	        return new BCryptPasswordEncoder();
 	    }
 	
-	   @Bean(name = "dataSource")
-	   public DriverManagerDataSource dataSource() {
-	       DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
-	       driverManagerDataSource.setDriverClassName("com.mysql.jdbc.Driver");
-	       driverManagerDataSource.setUrl("jdbc:mysql://localhost:3306/KondwaGuestHouse");
-	       driverManagerDataSource.setUsername("bunksheet");
-	       driverManagerDataSource.setPassword("sheetbunk123");
-	       return driverManagerDataSource;
-	   }
 //	   @Bean(name = "dataSource")
 //	   public DriverManagerDataSource dataSource() {
 //	       DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
 //	       driverManagerDataSource.setDriverClassName("com.mysql.jdbc.Driver");
-//	       driverManagerDataSource.setUrl("jdbc:mysql://db4free.net/kondwaguesthouse");
-//	       driverManagerDataSource.setUsername("asdtddkgh");
-//	       driverManagerDataSource.setPassword("asd-tdd-kgh");
+//	       driverManagerDataSource.setUrl("jdbc:mysql://localhost:3306/KondwaGuestHouse");
+//	       driverManagerDataSource.setUsername("bunksheet");
+//	       driverManagerDataSource.setPassword("sheetbunk123");
 //	       return driverManagerDataSource;
 //	   }
+	   @Bean(name = "dataSource")
+	   public DriverManagerDataSource dataSource() {
+	       DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
+	       driverManagerDataSource.setDriverClassName("com.mysql.jdbc.Driver");
+	       driverManagerDataSource.setUrl("jdbc:mysql://db4free.net/kondwaguesthouse");
+	       driverManagerDataSource.setUsername("asdtddkgh");
+	       driverManagerDataSource.setPassword("asd-tdd-kgh");
+	       return driverManagerDataSource;
+	   }
 }
